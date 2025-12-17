@@ -1429,6 +1429,21 @@
         }
     },
     {
+        "key": "py_甜圈短剧",
+        "name": "🅿️甜圈短剧｜py",
+        "type": 3,
+        "api": "./py/甜圈短剧.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "style": {
+            "type": "rect",
+            "ratio": 1.33
+        }
+    },
+    {
         "key": "啊哈DJ网",
         "name": "🎵啊哈┃DJ",
         "type": 3,
