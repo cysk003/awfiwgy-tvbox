@@ -507,6 +507,17 @@
         "ext": {}
     },
     {
+        "key": "py_路漫漫",
+        "name": "🅿️路漫漫｜py",
+        "type": 3,
+        "api": "./py/路漫漫.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "hipy_js_路漫漫",
         "name": "🔥路漫漫｜秒播",
         "type": 3,
