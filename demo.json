@@ -203,6 +203,18 @@
         "changeable": 0
     },
     {
+        "key": "移动云盘",
+        "name": "😍免扫码丨移动云盘",
+        "type": 3,
+        "api": "csp_PantaGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2025/12/18/824279901a5b5dac85e113e9dd930d4c.jpg;md5;2c813218abd7613d4147c0ab11c08fdf",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 25
+    },
+    {
         "key": "csp_Guazi",
         "name": "😳瓜子┃优质",
         "type": 3,
@@ -562,6 +574,17 @@
         "name": "🅿️漫岛动漫｜py",
         "type": 3,
         "api": "./py/漫岛动漫.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "py_漫蛙动漫",
+        "name": "🅿️漫蛙动漫｜py",
+        "type": 3,
+        "api": "./py/漫蛙动漫.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -969,6 +992,25 @@
             "分类数组": "<ul class=\"stui-vodlist clearfix\">&&</a></h4></li>",
             "分类url": "https://www.mandao.cc/vod/type/id/{cateId}/page/{catePg}.html",
             "分类": "国产动漫$1#日本动漫$2#动漫电影$5#欧美动漫$3"
+        }
+    },
+    {
+        "key": "漫蛙动漫",
+        "name": "💕漫蛙动漫┃多线",
+        "type": 3,
+        "api": "csp_XBPQ",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "ext": {
+            "请求头": "手机",
+            "免嗅探": "开",
+            "分类数组": "<ul class=\"stui-vodlist clearfix\">&&</a></h4></li>",
+            "分类url": "https://www.mwdm.cc/list/{cateId}-{catePg}/",
+            "分类": "国漫$2#日漫$3#番漫$1#其他$4"
         }
     },
     {
@@ -1520,6 +1562,12 @@
             "分类url": "https://www.wuwuys.com/show/{cateId}-{area}-{by}------{catePg}---{year}.html;;ak",
             "分类": "动漫$4#电影$1#电视剧$2#综艺$3"
         }
+    },
+    {
+        "key": "HGxmzb",
+        "name": "📡韩国丨直播",
+        "type": 4,
+        "api": "https://learnpython.ggff.net/HGxmzb"
     },
     {
         "key": "啊哈DJ网",
