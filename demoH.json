@@ -212,6 +212,18 @@
         "changeable": 0
     },
     {
+        "key": "移动云盘",
+        "name": "😍免扫码丨移动云盘",
+        "type": 3,
+        "api": "csp_PantaGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2025/12/18/824279901a5b5dac85e113e9dd930d4c.jpg;md5;2c813218abd7613d4147c0ab11c08fdf",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 25
+    },
+    {
         "key": "csp_Guazi",
         "name": "😳瓜子┃优质",
         "type": 3,
@@ -1531,6 +1543,12 @@
         }
     },
     {
+        "key": "HGxmzb",
+        "name": "📡韩国丨直播",
+        "type": 4,
+        "api": "https://learnpython.ggff.net/HGxmzb"
+    },
+    {
         "key": "啊哈DJ网",
         "name": "🎵啊哈┃DJ",
         "type": 3,
@@ -1984,6 +2002,18 @@
         "ext": "./js/NiceAV.js"
     },
     {
+        "key": "sbjhpy",
+        "name": "🔞中国丨大秀",
+        "type": 4,
+        "api": "https://learnpython.ggff.net/sbjhpy"
+    },
+    {
+        "key": "omdxzb",
+        "name": "🔞欧美丨大秀",
+        "type": 4,
+        "api": "https://learnpython.ggff.net/cam4"
+    },
+    {
         "key": "ss直播",
         "name": "🔞🎥成人直播",
         "type": 3,
@@ -2055,6 +2085,17 @@
             "链接": "/vodplay/+/voddetail/&&.html+-1-1.html",
             "类型": "中字有码$6#骑兵有码$7#||中字无码$8#骑兵无码$9#||糖心Vlog$13#国产传媒$11#国产精品$10#||欧美中字$12#||中字动漫$14#3D动漫$15"
         }
+    },
+    {
+        "key": "XJCJ",
+        "name": "🔞香蕉资源站",
+        "type": 1,
+        "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/?ac=list",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
     },
     {
         "key": "https://dd.fldh.club",
