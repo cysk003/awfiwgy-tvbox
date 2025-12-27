@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# by @恰逢不爱看短剧
 import sys
 from base.spider import Spider
 
