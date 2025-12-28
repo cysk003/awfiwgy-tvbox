@@ -561,28 +561,6 @@
         }
     },
     {
-        "key": "PY聚合",
-        "name": "❤️影视丨PY",
-        "type": 4,
-        "api": "http://zhangqun1818.serv00.net/py.php",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "php聚合",
-        "name": "❤️影视丨PHP",
-        "type": 4,
-        "api": "http://zhangqun1818.serv00.net/php.php",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
         "key": "py_路漫漫",
         "name": "🅿️路漫漫｜py",
         "type": 3,
@@ -741,28 +719,6 @@
         "ext": "./js/NT动漫.js"
     },
     {
-        "key": "播剧网",
-        "name": "🎥播剧网｜采集",
-        "type": 1,
-        "api": "https://www.ysxq.cc/api.php/provide/vod",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "http://caiji.dyttzyapi.com",
-        "name": "🎥电影天堂｜采集",
-        "type": 0,
-        "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/at/xml/",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
         "key": "爱看机器人",
         "name": "👖爱看机器人",
         "type": 3,
@@ -867,6 +823,28 @@
         "name": "👖飘零丨多线",
         "type": 1,
         "api": "https://p2100.net/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "播剧网",
+        "name": "👖播剧网｜采集",
+        "type": 1,
+        "api": "https://www.ysxq.cc/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "http://caiji.dyttzyapi.com",
+        "name": "👖电影天堂｜采集",
+        "type": 0,
+        "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/at/xml/",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
