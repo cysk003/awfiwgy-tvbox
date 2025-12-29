@@ -2052,6 +2052,17 @@
         "ext": "./js/NiceAV.js"
     },
     {
+        "key": "py_主播",
+        "name": "🔞🅿️主播｜py",
+        "type": 3,
+        "api": "./py/主播.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "sbjhpy",
         "name": "🔞中国丨大秀",
         "type": 4,
