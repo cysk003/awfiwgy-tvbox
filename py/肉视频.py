@@ -5,7 +5,7 @@ sys.path.append('..')
 from base.spider import Spider
 #发布页：https://rou.pub/dizhi
 class Spider(Spider):
-    def getName(self): return "肉视频"
+    def getName(self): return "RouVideo"
     def init(self, extend):
         self.home_url = 'https://rouva3.xyz'
         self.header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36", "Referer": self.home_url}
