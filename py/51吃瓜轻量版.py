@@ -47,7 +47,7 @@ class Spider(BaseSpider):
 
     def get_working_host(self):
         dynamic_urls = [
-            'https://anymore.cnvvzla.com',
+            'https://bottle.jokpgfs.cc',
             'https://rhsnpxhr.xyz', 
             'https://51web16.com'
         ]
