@@ -6,7 +6,7 @@ import sys
 import json
 import base64
 import urllib.parse
-
+#发布页：https://6muj.com
 sys.path.append('..')
 
 murl = "https://3642.7rnr.com/web/index.html"

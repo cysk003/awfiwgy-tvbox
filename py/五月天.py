@@ -2,7 +2,7 @@
 import re
 from pyquery import PyQuery as pq
 from base.spider import Spider
-
+#发布页：https://qswyt4444.com/page
 class Spider(Spider):
     def init(self, extend=""):
         self.host = "https://qswyt4444.com"
