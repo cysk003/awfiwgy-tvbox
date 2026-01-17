@@ -437,7 +437,7 @@
         "filterable": 1,
         "changeable": 1,
         "ext": {
-            "sites": "https://mogg.banye.tech:7138",
+            "sites": "https://www.muou.site",
             "proxy": "noproxy"
         }
     },
@@ -1796,7 +1796,10 @@
         "filterable": 1,
         "timeout": 120,
         "ext": {
-            "proxy": {},
+            "proxy": {
+                "http": "http://127.0.0.1:20172",
+                "https": "http://127.0.0.1:20172"
+            },
             "plp": ""
         }
     },
