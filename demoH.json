@@ -1573,6 +1573,17 @@
         }
     },
     {
+        "key": "py_黄色仓库",
+        "name": "🔞🅿️黄色仓库｜py",
+        "type": 3,
+        "api": "./py/黄色仓库.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "py_Hanime",
         "name": "🔞🅿️Hanime｜py",
         "type": 3,
@@ -1588,17 +1599,6 @@
         "name": "🔞🅿️香蕉视频｜py",
         "type": 3,
         "api": "./py/香蕉视频.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_黄色仓库",
-        "name": "🔞🅿️黄色仓库｜py",
-        "type": 3,
-        "api": "./py/黄色仓库.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
