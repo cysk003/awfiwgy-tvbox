@@ -527,17 +527,6 @@
         "timeout": 120
     },
     {
-        "key": "https://film.symx.club",
-        "name": "🅿️山有木兮｜py",
-        "type": 3,
-        "api": "./py/山有木兮.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
         "key": "py_界影视",
         "name": "🅿️界影视｜py",
         "type": 3,
