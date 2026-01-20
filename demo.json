@@ -32,7 +32,7 @@
         "name": "📡裤佬直播",
         "type": 0,
         "playerType": 2,
-        "url": "https://upld.zone.id/uploads/q9iq9e5iq/lvse.txt"
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1"
     }
 ],
 "sites": [
@@ -581,6 +581,17 @@
         "name": "🅿️独播库｜py",
         "type": 3,
         "api": "./py/独播库.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
+        "key": "py_rbotv",
+        "name": "🅿️RBOTV｜py",
+        "type": 3,
+        "api": "./py/rebo.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
