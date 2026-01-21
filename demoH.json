@@ -587,6 +587,28 @@
         "ext": "0"
     },
     {
+        "key": "独播JS",
+        "name": "❤️独播丨JS",
+        "api": "./js/独播库.js",
+        "type": 3,
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+    },
+    {
+        "key": "路漫漫JS",
+        "name": "❤️路漫漫丨JS",
+        "type": 3,
+        "api": "./js/drpy2.min.js",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "order_num": 0,
+        "ext": "./js/路漫漫.js"
+    },
+    {
         "key": "py_独播库",
         "name": "🅿️独播库｜py",
         "type": 3,
@@ -1019,7 +1041,7 @@
         "ext": {
             "请求头": "手机",
             "免嗅探": "开",
-            "分类数组": "thumb_img lazy\">&&</div>",
+            "分类数组": "bm-box\">&&</div></a>",
             "分类url": "https://www.mwju.cc/cate/",
             "分类": "国产$1#日韩$2#欧美$3#港台$4#动漫$5#里番$6"
         }
@@ -2049,6 +2071,36 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 120
+    },
+    {
+        "key": "HLBTY",
+        "name": "🔞裤佬丨黑料丨吃瓜",
+        "api": "https://learnpython.ggff.net/HLBTY",
+        "type": 4
+    },
+    {
+        "key": "0007cg",
+        "name": "🔞裤佬丨007丨吃瓜",
+        "api": "https://learnpython.ggff.net/0007cg",
+        "type": 4
+    },
+    {
+        "key": "51cg",
+        "name": "🔞裤佬丨51丨吃瓜",
+        "api": "https://learnpython.ggff.net/51xiG",
+        "type": 4
+    },
+    {
+        "key": "今日cg",
+        "name": "🔞裤佬丨今日丨吃瓜",
+        "api": "https://learnpython.ggff.net/JRKliao",
+        "type": 4
+    },
+    {
+        "key": "911cg",
+        "name": "🔞裤佬丨911丨吃瓜",
+        "api": "https://learnpython.ggff.net/911BaoLiao",
+        "type": 4
     },
     {
         "key": "http://96cctv.com-http://cctv12306.com",

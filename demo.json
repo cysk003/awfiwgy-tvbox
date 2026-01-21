@@ -577,6 +577,28 @@
         "ext": "0"
     },
     {
+        "key": "独播JS",
+        "name": "❤️独播丨JS",
+        "api": "./js/独播库.js",
+        "type": 3,
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+    },
+    {
+        "key": "路漫漫JS",
+        "name": "❤️路漫漫丨JS",
+        "type": 3,
+        "api": "./js/drpy2.min.js",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "order_num": 0,
+        "ext": "./js/路漫漫.js"
+    },
+    {
         "key": "py_独播库",
         "name": "🅿️独播库｜py",
         "type": 3,
@@ -996,7 +1018,7 @@
         }
     },
     {
-        "key": "漫蛙动漫",
+        "key": "https://www.su7.la",
         "name": "💕漫蛙动漫┃多线",
         "type": 3,
         "api": "csp_XBPQ",
