@@ -577,6 +577,17 @@
         "ext": "0"
     },
     {
+        "key": "腾讯影视",
+        "name": "❤️腾讯丨影视",
+        "type": 4,
+        "api": "https://learnpython.ggff.net/TXSPPY",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "独播JS",
         "name": "❤️独播丨JS",
         "api": "./js/独播库.js",
