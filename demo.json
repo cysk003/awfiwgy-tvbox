@@ -63,7 +63,7 @@
     },
     {
         "key": "移动云盘",
-        "name": "😍免扫丨网盘",
+        "name": "😍移动丨免扫",
         "type": 3,
         "api": "csp_PantaGuard",
         "jar": "./jar/kulao.jpg",
@@ -285,6 +285,44 @@
         "changeable": 0
     },
     {
+        "key": "粉象世界",
+        "name": "🐘粉象┃APP",
+        "type": 3,
+        "changeable": 0,
+        "api": "csp_Appfox",
+        "ext": {
+            "host": "http://host1.sopython.top/host.json",
+            "ver": 2
+        }
+    },
+    {
+        "key": "搜一下APP",
+        "name": "🥌搜搜┃APP",
+        "type": 3,
+        "api": "csp_Appfox",
+        "ext": "https://www.zjcvod.com"
+    },
+    {
+        "key": "火花影院",
+        "name": "🔥火花┃APP",
+        "type": 3,
+        "changeable": 0,
+        "api": "csp_Appfox",
+        "ext": {
+            "host": "http://huohua.itcxo.cn"
+        }
+    },
+    {
+        "key": "气球影视",
+        "name": "🎈气球｜APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://vv.229d.cn",
+            "datakey": "8888888888888888"
+        }
+    },
+    {
         "key": "金牌影院",
         "name": "🥇金牌┃APP",
         "type": 3,
@@ -292,8 +330,20 @@
         "changeable": 1,
         "api": "csp_AppGet",
         "ext": {
-            "host": "https://dtqj1.gg1080.com:443/dtjp.txt",
-            "datakey": "kecbio48dsq131ed",
+            "host": "https://dtqj.ggtvb.cc/dtjp.txt",
+            "datakey": "eecbio48dsq131ee",
+            "api": "2"
+        }
+    },
+    {
+        "key": "花小猪影视",
+        "name": "🐷花猪｜App",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://tiantangwulu.oss-cn-shanghai.aliyuncs.com/zhuzhuxia.txt",
+            "datakey": "j8sr6d93yp49db3p",
+            "ua": "okhttp/3.10.0",
             "api": "2"
         }
     },
@@ -321,28 +371,13 @@
         }
     },
     {
-        "key": "天峰影视",
-        "name": "⛰️天峰┃APP",
+        "key": "火狐影视",
+        "name": "🦊火狐｜APP",
         "type": 3,
-        "searchable": 1,
-        "changeable": 1,
         "api": "csp_AppGet",
         "ext": {
-            "host": "http://zxy-ys.810211.dpdns.org",
-            "datakey": "1234567890123456"
-        }
-    },
-    {
-        "key": "HG影视",
-        "name": "🌺HG┃APP",
-        "type": 3,
-        "searchable": 1,
-        "changeable": 1,
-        "api": "csp_AppGet",
-        "ext": {
-            "host": "https://ios.hgyx.vip",
-            "datakey": "062dec75d039980e",
-            "ua": "Dart/3.5 (dart:io)"
+            "host": "http://122.114.171.79:568/huohushipin.txt",
+            "datakey": "huohushipingetap"
         }
     },
     {
@@ -355,19 +390,6 @@
         "ext": {
             "host": "https://miget-1313189639.cos.ap-guangzhou.myqcloud.com/mifun.txt",
             "datakey": "GETMIFUNGEIMIFUN"
-        }
-    },
-    {
-        "key": "布雷4K",
-        "name": "🥶布雷｜APP",
-        "type": 3,
-        "searchable": 1,
-        "changeable": 1,
-        "api": "csp_AppGet",
-        "ext": {
-            "host": "https://ceshi307386.oss-cn-beijing.aliyuncs.com/blurl.txt",
-            "datakey": "5f2b7ed203a3a581",
-            "api": 2
         }
     },
     {
@@ -407,19 +429,6 @@
         }
     },
     {
-        "key": "影视",
-        "name": "😡影视┃APP",
-        "type": 3,
-        "searchable": 1,
-        "changeable": 1,
-        "api": "csp_AppGet",
-        "ext": {
-            "host": "https://jingyu4k-1312635929.cos.ap-nanjing.myqcloud.com/1.json",
-            "datakey": "AAdgrdghjfgswerA",
-            "api": 2
-        }
-    },
-    {
         "key": "次元方舟",
         "name": "🛸方舟┃APP",
         "type": 3,
@@ -444,17 +453,26 @@
         }
     },
     {
-        "key": "花小猪",
-        "name": "🐷小猪┃APP",
+        "key": "优优兔",
+        "name": "🐁优兔┃APP",
         "type": 3,
         "searchable": 1,
         "changeable": 1,
         "api": "csp_AppGet",
         "ext": {
-            "host": "https://tiantangyoulu.oss-cn-beijing.aliyuncs.com/tengxunyun.txt",
-            "ua": "okhttp/3.10.0",
-            "datakey": "seb5tq9mykp2w9ry",
-            "api": 2
+            "host": "https://uututv-1319209748.cos.ap-shanghai.myqcloud.com/uutuv4.txt",
+            "datakey": "UrWKPnmQWJA8AQzd",
+            "api": "2"
+        }
+    },
+    {
+        "key": "王子4K",
+        "name": "🙆王子┃APP",
+        "type": 3,
+        "api": "csp_AppGet",
+        "ext": {
+            "host": "https://app.95112475.xyz",
+            "datakey": "5a9w6x58dsq6z3a6"
         }
     },
     {
@@ -470,12 +488,42 @@
         }
     },
     {
+        "key": "剧下饭",
+        "name": "🍚剧集┃下饭",
+        "type": 3,
+        "changeable": 0,
+        "api": "csp_AppYsV2",
+        "ext": {
+            "api": "http://dmmax.juxiafan.com/icciu_api.php/v1.vod",
+            "apisignkey": "lvdoutv-1.0.0"
+        }
+    },
+    {
+        "key": "永恒视频",
+        "name": "🐁永恒┃APP",
+        "type": 3,
+        "api": "csp_Hmys",
+        "ext": {
+            "host": "https://dy.oogsy.com",
+            "app_id": "yongheng",
+            "deviceid": "92ec8baead8e788b",
+            "versionCode": "10000",
+            "UMENG_CHANNEL": "zhuan"
+        }
+    },
+    {
         "key": "VS影视",
         "name": "🍩VS┃影视",
         "type": 3,
         "api": "csp_XBPQ",
         "ext": "./xb/VS影视.json",
         "jar": "./jar/xbpq.jar"
+    },
+    {
+        "key": "山有木兮",
+        "name": "🏔️山木┃（羊）",
+        "type": 3,
+        "api": "./js/山有木兮.js"
     },
     {
         "key": "py_LIBVIO",
