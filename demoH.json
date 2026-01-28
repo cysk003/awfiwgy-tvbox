@@ -532,12 +532,6 @@
         "jar": "./jar/xbpq.jar"
     },
     {
-        "key": "山有木兮",
-        "name": "🏔️山木┃（羊）",
-        "type": 3,
-        "api": "./js/山有木兮.js"
-    },
-    {
         "key": "py_LIBVIO",
         "name": "🤖LIBVIO┃PY",
         "api": "./py/LIBVIO.py",
@@ -654,15 +648,6 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 120
-    },
-    {
-        "key": "独播JS",
-        "name": "❤️独播丨JS",
-        "api": "./js/独播库.js",
-        "type": 3,
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 1
     },
     {
         "key": "路漫漫JS",
@@ -873,6 +858,19 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 120
+    },
+    {
+        "key": "木兮影视",
+        "name": "👖木兮｜影视",
+        "type": 3,
+        "api": "csp_Symx",
+        "jar": "https://tvbox.catvod.com/xs/spider.jar",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120,
+        "ext": "https://film.symx.club"
     },
     {
         "key": "瓜子影视",
