@@ -75,7 +75,7 @@
     },
     {
         "key": "移动云盘",
-        "name": "😍移动丨免扫",
+        "name": "😍移动丨免扫码",
         "type": 3,
         "api": "csp_PantaGuard",
         "jar": "./jar/kulao.jpg",
@@ -84,6 +84,22 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 25
+    },
+    {
+        "key": "多多网盘",
+        "name": "😍多多丨免扫码",
+        "type": 3,
+        "api": "csp_HBNT4",
+        "jar": "http://154.201.83.69:25252/仅供测试/custom_spider.jar;md5;7106a041705c8e0e43ec9cbf0d131dcd",
+        "ext": "DyoqWQInJUMuGFcBCgtNXAQ4Og8HOSNECiVBHi0YVUg="
+    },
+    {
+        "key": "至臻网盘",
+        "name": "😍臻彩丨免扫码",
+        "type": 3,
+        "api": "csp_HBNT4",
+        "jar": "http://154.201.83.69:25252/仅供测试/custom_spider.jar;md5;7106a041705c8e0e43ec9cbf0d131dcd",
+        "ext": "DyoqWQIrBwMuUgZBNzVBHQA7MUcsCFtcCjVMVA=="
     },
     {
         "key": "csp_PanShareQuark",
@@ -524,43 +540,6 @@
         }
     },
     {
-        "key": "VS影视",
-        "name": "🍩VS┃影视",
-        "type": 3,
-        "api": "csp_XBPQ",
-        "ext": "./xb/VS影视.json",
-        "jar": "./jar/xbpq.jar"
-    },
-    {
-        "key": "py_LIBVIO",
-        "name": "🤖LIBVIO┃PY",
-        "api": "./py/LIBVIO.py",
-        "filterable": 1,
-        "timeout": 60,
-        "quickSearch": 1,
-        "searchable": 1,
-        "type": 3
-    },
-    {
-        "key": "py_两个BTPY",
-        "name": "🤠两个┃BT",
-        "api": "./py/两个BT.py",
-        "filterable": 1,
-        "quickSearch": 1,
-        "searchable": 1,
-        "type": 3
-    },
-    {
-        "key": "py_盘友圈",
-        "name": "🤒盘友┃搜索",
-        "api": "./py/盘友圈.py",
-        "filterable": 1,
-        "timeout": 60,
-        "quickSearch": 1,
-        "searchable": 1,
-        "type": 3
-    },
-    {
         "key": "csp_Bili",
         "name": "🅱️哔哩┃合集",
         "type": 3,
@@ -836,8 +815,23 @@
         "timeout": 120
     },
     {
+        "key": "裤佬APP直播",
+        "name": "🐱APP丨直播",
+        "type": 3,
+        "api": "csp_AweSomeGuard",
+        "jar": "http://oss4liview.moji.com/thd_file/2026/01/23/aabe9ebea7695ee766e0bf503b218dcc.jpg;md5;f2973db01b3ac8dd9d9cd931e384935e",
+        "searchable": 0,
+        "quickSearch": 0,
+        "changeable": 0,
+        "filterable": 1,
+        "ext": {
+            "sp": "Living"
+        },
+        "timeout": 10
+    },
+    {
         "key": "爱看机器人",
-        "name": "👖爱看机器人",
+        "name": "🐱爱看机器人",
         "type": 3,
         "api": "csp_Ikanbot",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -849,7 +843,7 @@
     },
     {
         "key": "PTT",
-        "name": "👖PTT",
+        "name": "🐱PTT",
         "type": 3,
         "api": "csp_PTT",
         "jar": "./jar/fm.jar",
@@ -861,7 +855,7 @@
     },
     {
         "key": "木兮影视",
-        "name": "👖木兮｜影视",
+        "name": "🐱木兮｜影视",
         "type": 3,
         "api": "csp_Symx",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -874,7 +868,7 @@
     },
     {
         "key": "瓜子影视",
-        "name": "👖瓜子丨秒播",
+        "name": "🐱瓜子丨秒播",
         "type": 3,
         "api": "csp_Gz360",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -886,7 +880,7 @@
     },
     {
         "key": "农民影视",
-        "name": "👖农民｜影视",
+        "name": "🐱农民｜影视",
         "type": 3,
         "api": "csp_Wwys",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -899,7 +893,7 @@
     },
     {
         "key": "https://www.qiyoudy.info",
-        "name": "👖奇优｜影视",
+        "name": "🐱奇优｜影视",
         "type": 3,
         "api": "csp_Qiyou",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -911,7 +905,7 @@
     },
     {
         "key": "苹果影视",
-        "name": "👖苹果｜秒播",
+        "name": "🐱苹果｜秒播",
         "type": 3,
         "api": "csp_LiteApple",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -923,7 +917,7 @@
     },
     {
         "key": "http://ivdy.com",
-        "name": "👖金牌丨秒播",
+        "name": "🐱金牌丨秒播",
         "type": 3,
         "api": "csp_Jpys",
         "jar": "https://tvbox.catvod.com/xs/spider.jar",
@@ -936,7 +930,7 @@
     },
     {
         "key": "飘零影院",
-        "name": "👖飘零丨多线",
+        "name": "🐱飘零丨多线",
         "type": 1,
         "api": "https://p2100.net/api.php/provide/vod",
         "searchable": 1,
@@ -947,7 +941,7 @@
     },
     {
         "key": "播剧网",
-        "name": "👖播剧网｜采集",
+        "name": "🐱播剧网｜采集",
         "type": 1,
         "api": "https://www.ysxq.cc/api.php/provide/vod",
         "searchable": 1,
@@ -958,7 +952,7 @@
     },
     {
         "key": "http://caiji.dyttzyapi.com",
-        "name": "👖电影天堂｜采集",
+        "name": "🐱电影天堂｜采集",
         "type": 0,
         "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/at/xml/",
         "searchable": 1,
