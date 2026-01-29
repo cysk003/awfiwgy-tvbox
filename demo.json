@@ -435,17 +435,6 @@
         "timeout": 120
     },
     {
-        "key": "py_rbotv",
-        "name": "🅿️RBOTV｜py",
-        "type": 3,
-        "api": "./py/rebo.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
         "key": "py_路漫漫",
         "name": "🅿️路漫漫｜py",
         "type": 3,
@@ -472,17 +461,6 @@
         "name": "🅿️漫蛙动漫｜py",
         "type": 3,
         "api": "./py/漫蛙动漫.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_樱花动漫",
-        "name": "🅿️樱花动漫｜py",
-        "type": 3,
-        "api": "./py/樱花动漫.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
