@@ -1461,10 +1461,10 @@
         "timeout": 120
     },
     {
-        "key": "py_Hanime",
-        "name": "🔞🅿️Hanime｜py",
+        "key": "py_香蕉视频",
+        "name": "🔞🅿️香蕉视频｜py",
         "type": 3,
-        "api": "./py/Hanime.py",
+        "api": "./py/香蕉视频.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1472,10 +1472,10 @@
         "timeout": 120
     },
     {
-        "key": "py_香蕉视频",
-        "name": "🔞🅿️香蕉视频｜py",
+        "key": "py_花都影视",
+        "name": "🔞🅿️花都影视｜py",
         "type": 3,
-        "api": "./py/香蕉视频.py",
+        "api": "./py/花都影视.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
@@ -1814,6 +1814,17 @@
         }
     },
     {
+        "key": "py_Hanime",
+        "name": "🔞🅿️Hanime｜py",
+        "type": 3,
+        "api": "./py/Hanime.py",
+        "searchable": 1,
+        "quickSearch": 1,
+        "changeable": 1,
+        "filterable": 1,
+        "timeout": 120
+    },
+    {
         "key": "py_玩具社区",
         "name": "🔞🅿️玩具社区｜py",
         "type": 3,
@@ -1942,36 +1953,6 @@
         "changeable": 1,
         "filterable": 1,
         "timeout": 120
-    },
-    {
-        "key": "HLBTY",
-        "name": "🔞裤佬丨黑料丨吃瓜",
-        "api": "https://learnpython.ggff.net/HLBTY",
-        "type": 4
-    },
-    {
-        "key": "0007cg",
-        "name": "🔞裤佬丨007丨吃瓜",
-        "api": "https://learnpython.ggff.net/0007cg",
-        "type": 4
-    },
-    {
-        "key": "51cg",
-        "name": "🔞裤佬丨51丨吃瓜",
-        "api": "https://learnpython.ggff.net/51xiG",
-        "type": 4
-    },
-    {
-        "key": "今日cg",
-        "name": "🔞裤佬丨今日丨吃瓜",
-        "api": "https://learnpython.ggff.net/JRKliao",
-        "type": 4
-    },
-    {
-        "key": "911cg",
-        "name": "🔞裤佬丨911丨吃瓜",
-        "api": "https://learnpython.ggff.net/911BaoLiao",
-        "type": 4
     },
     {
         "key": "http://96cctv.com-http://cctv12306.com",
