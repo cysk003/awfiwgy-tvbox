@@ -10,7 +10,8 @@ from base.spider import Spider
 
 class Spider(Spider):
     def init(self, extend=""):
-        self.host = "https://down.nigx.cn/hanime1.me"
+        # 建议使用原站或稳定的镜像地址
+        self.host = "https://hanime1.me"
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Referer': f'{self.host}/',
@@ -49,38 +50,54 @@ class Spider(Spider):
 
     def categoryContent(self, tid, pg, filter, extend):
         page = int(pg)
-        sort = extend.get('sort', '最新上市')
         
-        if 'rank' in tid or tid == 'latest_rank':
-            rank_map = {'latest_rank': '最新上市', 'daily_rank': '本日排行', 'weekly_rank': '本週排行', 'monthly_rank': '本月排行'}
-            url = f"{self.host}/search?sort={quote(rank_map.get(tid, '最新上市'))}&page={page}"
+        # 映射表：将 type_id 映射为网站识别的 sort 字符串
+        rank_map = {
+            'latest_rank': '最新上市',
+            'daily_rank': '本日排行',
+            'weekly_rank': '本週排行',
+            'monthly_rank': '本月排行'
+        }
+
+        # 核心修复逻辑：
+        # 1. 如果 extend 中有用户选下的 sort，则优先使用
+        # 2. 如果没有，则尝试从 rank_map 匹配 tid 的默认排序
+        # 3. 最后保底使用 '最新上市'
+        sort = extend.get('sort')
+        if not sort:
+            sort = rank_map.get(tid, '最新上市')
+
+        # 构造请求 URL
+        if tid in rank_map:
+            # 排行类标签通常不需要 genre 参数
+            url = f"{self.host}/search?sort={quote(sort)}&page={page}"
         else:
-            # 分类请求必须使用 genre 参数
+            # 普通分类标签（如：裏番）需要 genre 和 sort 同时存在
             url = f"{self.host}/search?genre={quote(tid)}&sort={quote(sort)}&page={page}"
 
         try:
             content = self.fetch(url, headers=self.headers).text
             vods = self.parse_vod_list(content)
             
-            # 提取总页数
+            # 提取总页数：寻找类似 "第 1 / 100 页" 的结构
             pc_match = re.search(r'\/ (\d+)', content)
             pagecount = int(pc_match.group(1)) if pc_match else page + 1
             
             return {'list': vods, 'page': page, 'pagecount': pagecount}
-        except:
+        except Exception:
             return {'list': []}
 
     def parse_vod_list(self, html):
         vods = []
         seen = set()
 
-        # 模式1：适配搜索结果/分类页卡片布局 (video-item-container)
+        # 模式1：搜索结果卡片布局
         p1 = re.compile(r'class="video-item-container".*?href="[^"]*v=(\d+)".*?src="([^"]+)".*?class="duration">(.*?)<.*?class="title">(.*?)<', re.S)
         
-        # 模式2：适配首页/行布局 (home-rows)
+        # 模式2：首页行列表布局
         p2 = re.compile(r'href="[^"]*watch\?v=(\d+)".*?src="([^"]+)".*?class="home-rows-videos-title"[^>]*>(.*?)</div>', re.S)
 
-        # 优先匹配卡片布局
+        # 匹配卡片
         for vid, pic, dur, title in p1.findall(html):
             if vid not in seen:
                 seen.add(vid)
@@ -91,7 +108,7 @@ class Spider(Spider):
                     "vod_remarks": dur.strip()
                 })
 
-        # 补充匹配行布局
+        # 匹配行
         if not vods:
             for vid, pic, title in p2.findall(html):
                 if vid not in seen:
@@ -109,10 +126,13 @@ class Spider(Spider):
         url = f"{self.host}/watch?v={vid}"
         try:
             html = self.fetch(url, headers=self.headers).text
-            title = re.search(r'<meta property="og:title" content="(.*?)"', html).group(1)
-            pic = re.search(r'<meta property="og:image" content="(.*?)"', html).group(1)
+            title_match = re.search(r'<meta property="og:title" content="(.*?)"', html)
+            pic_match = re.search(r'<meta property="og:image" content="(.*?)"', html)
             
-            # 解析播放源并识别清晰度
+            title = title_match.group(1) if title_match else "未知标题"
+            pic = pic_match.group(1) if pic_match else ""
+            
+            # 解析播放源
             sources = re.findall(r'<source[^>]+src="([^"]+)"', html)
             if not sources:
                 sources = re.findall(r'https?://[^\s"\'<>]+?\.mp4[^\s"\'<>]*', html)
@@ -124,15 +144,14 @@ class Spider(Spider):
                 if s_url in seen_urls: continue
                 seen_urls.add(s_url)
 
-                # 画质识别逻辑
                 if '1080' in s_url: tag = "1080P"
                 elif '720' in s_url: tag = "720P"
                 else: tag = "标清"
                 
                 play_parts.append(f"{tag}${s_url}")
 
-            # 画质由高到低排序
-            play_parts.sort(key=lambda x: 0 if "1080" in x else (1 if "720" in x else 2))
+            # 排序：高清在前
+            play_parts.sort(key=lambda x: 0 if "1080" in x else (1 if "720" in x else 2)) 
 
             return {'list': [{
                 "vod_id": vid,
@@ -141,7 +160,7 @@ class Spider(Spider):
                 "vod_play_from": "Hanime",
                 "vod_play_url": "#".join(play_parts)
             }]}
-        except:
+        except Exception:
             return {'list': []}
 
     def searchContent(self, key, quick, pg="1", extend=None):
@@ -149,14 +168,14 @@ class Spider(Spider):
         try:
             html = self.fetch(url, headers=self.headers).text
             return {'list': self.parse_vod_list(html), 'page': pg}
-        except:
+        except Exception:
             return {'list': []}
 
     def playerContent(self, flag, id, vipFlags):
-        # 修复播放问题的关键：伪造 Referer
+        # 必须伪造原站 Referer 绕过防盗链
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Referer': 'https://hanime1.me/', # 必须指向原站
+            'Referer': 'https://hanime1.me/',
             'Connection': 'keep-alive'
         }
         return {'parse': 0, 'url': id, 'header': headers}
