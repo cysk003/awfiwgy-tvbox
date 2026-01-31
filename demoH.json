@@ -1363,8 +1363,8 @@
         }
     },
     {
-        "name": "KTV音乐",
-        "key": "🎤KTV丨音乐",
+        "key": "酷狗音乐",
+        "name": "🎤酷狗丨音乐",
         "type": 3,
         "api": "csp_KuGouAmns",
         "jar": "http://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/bfdb--cvdvds.png",
@@ -1411,28 +1411,6 @@
         "name": "🅿️深港DJ丨音乐",
         "type": 3,
         "api": "./py/深港音乐汇.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_网易云音乐",
-        "name": "🅿️网易云丨音乐",
-        "type": 3,
-        "api": "./py/网易云音乐.py",
-        "searchable": 1,
-        "quickSearch": 1,
-        "changeable": 1,
-        "filterable": 1,
-        "timeout": 120
-    },
-    {
-        "key": "py_网易云丨音乐",
-        "name": "🅿️网易云丨音乐",
-        "type": 3,
-        "api": "./py/网易云音乐1.py",
         "searchable": 1,
         "quickSearch": 1,
         "changeable": 1,
