@@ -7,13 +7,13 @@ class Spider(Spider):
     def isVideoFormat(self, url): pass
     def manualVideoCheck(self): pass
     def destroy(self): pass
-    
+    #https://ho9.net/lmm
     def __init__(self):
-        self.url = 'https://www.lmm50.com'
+        self.url = 'https://dm.g916.com'
         self.header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Referer': self.url}
 
     def homeContent(self, filter):
-        c = [('国产动漫','guochandongman'),('动态漫画','dongtaiman'),('日本动漫','ribendongman'),('欧美动漫','oumeidongman'),('国产动画电影','guochandonghuadianying'),('日本动画电影','ribendonghuadianying'),('欧美动画电影','oumeidonghuadianying'),('日本特摄剧','teshepian')]
+        c = [('国产动漫','guochandongman'),('动态漫画','dongtaiman'),('日本动漫','ribendongman'),('欧美动漫','oumeidongman'),('国产电影','guochandonghuadianying'),('日本电影','ribendonghuadianying'),('欧美电影','oumeidonghuadianying'),('特摄剧','teshepian')]
         return {'class': [{'type_name': n, 'type_id': i} for n, i in c]}
 
     def homeVideoContent(self):
