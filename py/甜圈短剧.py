@@ -1,4 +1,6 @@
 import sys
+import re
+import urllib.parse
 from base.spider import Spider
 
 class Spider(Spider):
@@ -8,7 +10,6 @@ class Spider(Spider):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         }
-        self.video_cache = {}
 
     def getName(self):
         return self.name
@@ -23,120 +24,95 @@ class Spider(Spider):
         return False
 
     def homeContent(self, filter):
-        categories = ['新剧', '逆袭', '霸总', '现代言情', '打脸虐渣', '豪门恩怨', '神豪', '马甲','都市日常', '战神归来', '小人物', '女性成长', '大女主', '穿越', '都市修仙', '强者回归','亲情', '古装', '重生', '闪婚', '赘婿逆袭', '虐恋', '追妻', '天下无敌', '家庭伦理','萌宝', '古风权谋', '职场', '奇幻脑洞', '异能', '无敌神医', '古风言情', '传承觉醒','现言甜宠', '奇幻爱情', '乡村', '历史古代', '王妃', '高手下山', '娱乐圈', '强强联合','破镜重圆', '暗恋成真', '民国', '欢喜冤家', '系统', '真假千金', '龙王', '校园','穿书', '女帝', '团宠', '年代爱情', '玄幻仙侠', '青梅竹马', '悬疑推理', '皇后','替身', '大叔', '喜剧', '剧情']
-        return {'class': [{'type_id': cat, 'type_name': cat} for cat in categories]}
+        res = self.fetch(self.host)
+        cats = re.findall(r"selectCategory\('([^']+)'\)", res.text)
+        classes = [{'type_id': c, 'type_name': c} for c in cats]
+        return {'class': classes}
 
     def homeVideoContent(self):
-        return self._get_videos({'offset': '0'})
+        return self.categoryContent('推荐榜', '1', False, {})
 
     def categoryContent(self, tid, pg, filter, extend):
-        params = {'offset': str((int(pg) - 1) * 20), 'classname': tid}
-        return self._get_videos(params, paginate=True)
+        offset = '0' if str(pg) == '1' else str(pg)
+        url = f"{self.host}/duanju/api.php?classname={urllib.parse.quote(tid)}&offset={offset}"
+        res = self.fetch(url).json()
+        data = res.get('data', [])
+        videos = []
+        for item in data:
+            play_cnt = item.get('play_cnt', 0)
+            if isinstance(play_cnt, (int, float)):
+                play_cnt = f"{play_cnt/10000:.2f}万"
+            videos.append({
+                'vod_id': str(item.get('book_id', '')),
+                'vod_name': item.get('title', ''),
+                'vod_pic': item.get('cover', ''),
+                'vod_remarks': str(play_cnt)
+            })
+        return {'list': videos}
 
     def detailContent(self, ids):
-        try:
-            bid = ids[0]
-            video_info = self.video_cache.get(bid, {})
-            
-            if not video_info:
-                video_info = self._fetch_video_info(bid)
-            
-            episodes = self._get_episodes(bid, video_info)
-            
-            vod = {
-                'vod_id': bid,
-                'vod_name': video_info.get('title', '甜圈短剧'),
-                'vod_pic': video_info.get('cover', ''),
-                'vod_content': video_info.get('video_desc', ''),
-                'vod_remarks': f"共{video_info.get('episode_cnt', '0')}集",
-                'vod_play_from': '甜圈短剧',
-                'vod_play_url': '#'.join(episodes)
-            }
-            
-            return {'list': [vod]}
-        except Exception:
-            return {'list': []}
+        bid = ids[0]
+        url = f"{self.host}/duanju/api.php?book_id={bid}"
+        res = self.fetch(url).json()
+        vod = {
+            'vod_id': bid,
+            'vod_name': res.get('book_name', ''),
+            'vod_pic': res.get('book_pic', ''),
+            'vod_content': res.get('desc', ''),
+            'vod_remarks': f"共{res.get('total', 0)}集",
+            'type_name': ','.join(res.get('category_names', [])),
+        }
+        episodes = res.get('data', [])
+        resolutions = [
+            ('自动', 'auto'),
+            ('2160p', '2160p'),
+            ('1080p', '1080p'),
+            ('720p', '720p'),
+            ('540p', '540p'),
+            ('480p', '480p'),
+            ('360p', '360p')
+        ]
+        play_froms = []
+        play_urls = []
+        for res_name, res_code in resolutions:
+            play_froms.append(res_name)
+            ep_list = []
+            for ep in episodes:
+                title = ep.get('title', '未知')
+                vid = ep.get('video_id', '')
+                ep_list.append(f"{title}${vid}|{res_code}")
+            play_urls.append('#'.join(ep_list))
+        vod['vod_play_from'] = '$$$'.join(play_froms)
+        vod['vod_play_url'] = '$$$'.join(play_urls)
+        return {'list': [vod]}
 
     def searchContent(self, key, quick, pg="1"):
-        params = {'name': key, 'offset': str((int(pg) - 1) * 20)}
-        return self._get_videos(params)
+        url = f"{self.host}/duanju/api.php?name={urllib.parse.quote(key)}&page={pg}&tab_type=11&showRawParams=false"
+        res = self.fetch(url).json()
+        data = res.get('data', [])
+        videos = []
+        for item in data:
+            videos.append({
+                'vod_id': str(item.get('book_id', '')),
+                'vod_name': item.get('title', ''),
+                'vod_pic': item.get('cover', ''),
+                'vod_remarks': item.get('type', ''),
+                'vod_content': item.get('intro', '')
+            })
+        return {'list': videos}
 
     def playerContent(self, flag, id, vipFlags):
-        try:
-            url = self._get_play_url(id)
-            return {'parse': 0, 'url': url, 'header': self.headers}
-        except Exception:
-            return {'parse': 0, 'url': ''}
+        parts = id.split('|')
+        vid = parts[0]
+        level = parts[1] if len(parts) > 1 else 'auto'
+        if level == 'auto':
+            url = f"{self.host}/duanju/api.php?video_id={vid}&type=mp4"
+        else:
+            url = f"{self.host}/duanju/api.php?video_id={vid}&type=mp4&level={level}"
+        return {'parse': 0, 'url': url, 'header': self.headers}
 
     def destroy(self):
         pass
 
     def localProxy(self, param):
         return None
-
-    # 辅助方法
-    def _get_videos(self, params, paginate=False):
-        try:
-            res = self.fetch(f'{self.host}/duanju/api.php', params=params)
-            data = res.json().get('data', [])
-            
-            videos = []
-            for item in data[:20]:  # 限制20个结果
-                vid = item.get('book_id') or item.get('video_id', '')
-                self.video_cache[vid] = item
-                
-                videos.append({
-                    'vod_id': vid,
-                    'vod_name': item.get('title', ''),
-                    'vod_pic': item.get('cover', ''),
-                    'vod_remarks': f"{item.get('episode_cnt', '0')}集"
-                })
-            
-            if paginate:
-                return {'list': videos, 'page': params['offset'][0], 'pagecount': 999}
-            return {'list': videos}
-        except Exception:
-            return {'list': []}
-
-    def _fetch_video_info(self, bid):
-        try:
-            res = self.fetch(f'{self.host}/duanju/api.php', params={'book_id': bid})
-            data = res.json().get('data', {})
-            return data[0] if isinstance(data, list) and data else data
-        except Exception:
-            return {}
-
-    def _get_episodes(self, bid, video_info):
-        episodes = []
-        try:
-            res = self.fetch(f'{self.host}/duanju/api.php', params={'action': 'episodes', 'book_id': bid})
-            data = res.json().get('data', [])
-            
-            for ep in data:
-                title = ep.get('title', f"第{ep.get('index', 1)}集")
-                vid = ep.get('video_id', '')
-                if vid:
-                    episodes.append(f"{title}${vid}")
-        except Exception:
-            pass
-        
-        if not episodes:
-            count = int(video_info.get('episode_cnt', 1))
-            for i in range(1, count + 1):
-                episodes.append(f"第{i}集${bid}_{i}")
-        
-        return episodes or [f"播放${bid}"]
-
-    def _get_play_url(self, vid):
-        try:
-            res = self.fetch(f'{self.host}/duanju/api.php', params={'video_id': vid})
-            data = res.json().get('data', {})
-            
-            if isinstance(data, dict):
-                return data.get('url', f'{self.host}/video/{vid}.m3u8')
-            elif isinstance(data, list) and data:
-                return data[0].get('url', f'{self.host}/video/{vid}.m3u8')
-        except Exception:
-            pass
-        
-        return f'{self.host}/video/{vid}.m3u8'

@@ -44,13 +44,7 @@ class Spider(Spider):
             {'type_id': '618041.xyz_23', 'type_name': '日韩剧情'},
             {'type_id': '618041.xyz_21', 'type_name': '经典伦理'},
             {'type_id': '618041.xyz_7', 'type_name': '成人动漫'},
-            {'type_id': '618041.xyz_14', 'type_name': '精品二区'},
-            {'type_id': '618041.xyz_53', 'type_name': '动漫中字'},
-            {'type_id': '618041.xyz_52', 'type_name': '日本无码'},
-            {'type_id': '618041.xyz_33', 'type_name': '中文字幕'},
-            {'type_id': '618041.xyz_32', 'type_name': '国产自拍'},
-            {'type_id': '618041.xyz_40', 'type_name': '精品专区'},
-            {'type_id': '618041.xyz_44', 'type_name': '国产大奶'}
+            {'type_id': '618041.xyz_14', 'type_name': '精品二区'}
         ]
 
     def html(self, content):

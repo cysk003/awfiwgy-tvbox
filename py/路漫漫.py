@@ -9,7 +9,7 @@ class Spider(Spider):
     def destroy(self): pass
     #https://ho9.net/lmm
     def __init__(self):
-        self.url = 'https://dm.g916.com'
+        self.url = 'https://www.lmm85.com'
         self.header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Referer': self.url}
 
     def homeContent(self, filter):

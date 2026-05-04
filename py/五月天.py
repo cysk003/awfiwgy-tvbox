@@ -5,7 +5,7 @@ from base.spider import Spider
 #发布页：https://qswyt4444.com/page
 class Spider(Spider):
     def init(self, extend=""):
-        self.host = "https://qswyt4444.com"
+        self.host = "https://qswyt03.cc"
         self.headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36','Referer':f'{self.host}/','Accept-Language':'zh-CN,zh;q=0.9'}
     def getName(self):return "QS五月天"
     def isVideoFormat(self,url):return url.lower().endswith('.m3u8')
