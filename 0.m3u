@@ -1,19 +1,23 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="驚艷台" tvg-name="驚艷台" tvg-logo="" group-title="🔞台湾成人直播",驚艷台
-http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/87.ts
-#EXTINF:-1 tvg-id="驚艷台" tvg-name="驚艷台" tvg-logo="" group-title="🔞台湾成人直播",驚艷台
+#EXTINF:-1 tvg-id="Кино 18+ International" tvg-name="Кино 18+ International" tvg-logo="" group-title="午夜频道",Кино 18+ International
+https://v2.catcast.tv/content/40381/index.m3u8#http://line.hello-ott.xyz/jCp4YyMfXc/nowo2O4ogJ/1451481
+#EXTINF:-1 tvg-id="pigo" tvg-name="pigo" tvg-logo="" group-title="午夜频道",pigo
+http://flvforhls-pull-goldendragon.speedws.com:80/live/b815c608179517e41dbf3478096cabd1.flv#https://cf005.paopao.video:443/6FA889EA7A6FC4659B929A38188A059E5BE0BB8B
+#EXTINF:-1 tvg-id="日本映画" tvg-name="日本映画" tvg-logo="" group-title="午夜频道",日本映画
+http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs23
+#EXTINF:-1 tvg-id="东映" tvg-name="东映" tvg-logo="" group-title="午夜频道",东映
+http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs27#http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/86.ts#http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/89.ts#http://45.235.0.78:80/PLAYBOYTV-HD/index.m3u8#http://190.14.10.19:16000/play/a045/index.m3u8#http://rhsbjv7k.tvclub.xyz/iptv/N8HKZ3DNUQKK2D/6242/index.m3u8
+#EXTINF:-1 tvg-id="驚艷" tvg-name="驚艷" tvg-logo="" group-title="台湾频道",驚艷
 http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/85.ts
-#EXTINF:-1 tvg-id="潘朵拉" tvg-name="潘朵拉" tvg-logo="" group-title="🔞台湾成人直播",潘朵拉
+#EXTINF:-1 tvg-id="潘朵拉完美" tvg-name="潘朵拉完美" tvg-logo="" group-title="台湾频道",潘朵拉完美
 http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/86.ts
-#EXTINF:-1 tvg-id="松视1" tvg-name="松视1" tvg-logo="" group-title="🔞台湾成人直播",松视1
+#EXTINF:-1 tvg-id="松視1台" tvg-name="松視1台" tvg-logo="" group-title="台湾频道",松視1台
 http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/88.ts
-#EXTINF:-1 tvg-id="松视2" tvg-name="松视2" tvg-logo="" group-title="🔞台湾成人直播",松视2
+#EXTINF:-1 tvg-id="松視2台" tvg-name="松視2台" tvg-logo="" group-title="台湾频道",松視2台
 http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/89.ts
-#EXTINF:-1 tvg-id="松視3" tvg-name="松視3" tvg-logo="" group-title="🔞台湾成人直播",松視3
-http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/90.ts
-#EXTINF:-1 tvg-id="24×7东京热" tvg-name="24×7东京热" tvg-logo="" group-title="🔞台湾成人直播",24×7东京热
-http://1tv41.icu:8080/LaLa34@yahoo.com/LaLa7678/159976
-#EXTINF:-1 tvg-id="24×7日本道" tvg-name="24×7日本道" tvg-logo="" group-title="🔞台湾成人直播",24×7日本道
-http://1tv41.icu:8080/LaLa34@yahoo.com/LaLa7678/159958
-#EXTINF:-1 tvg-id="24x7啪啪啪" tvg-name="24x7啪啪啪" tvg-logo="" group-title="🔞台湾成人直播",24x7啪啪啪
-http://7707bo.trustdeveloppment.com/live/cx_15642.flv
+#EXTINF:-1 tvg-id="此版本" tvg-name="此版本" tvg-logo="" group-title="台湾频道",此版本
+https://pan.vma.cc/pan/down.php/1586a9952601c56b8436c39118ecfc91.jpg#https://cf005.paopao.video:443/421991935BC03A9772580CE31656DBCE02B6394A
+#EXTINF:-1 tvg-id="暂停更新节目" tvg-name="暂停更新节目" tvg-logo="" group-title="台湾频道",暂停更新节目
+https://cf005.paopao.video:443/6EFFADABCC58185F7B3DC77B442DF9D48D32F078
+#EXTINF:-1 tvg-id="请更新版本" tvg-name="请更新版本" tvg-logo="" group-title="台湾频道",请更新版本
+https://cf005.paopao.video:443/FD71AD65289035F3B666174C26399D9244753939
